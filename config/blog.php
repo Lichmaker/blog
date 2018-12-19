@@ -5,6 +5,9 @@ return [
     // Mail Notification
     'mail_notification' => env('MAIL_NOTIFICATION') ?: false,
 
+    // Super Admin
+    'super_admin' => env('APP_SUPER_ADMIN') ?: 1,
+
     // Default Avatar
     'default_avatar' => env('DEFAULT_AVATAR') ?: '/images/default.png',
 
@@ -12,7 +15,7 @@ return [
     'default_icon' => env('DEFAULT_ICON') ?: '/images/favicon.ico',
 
     // Color Theme
-    'color_theme' => 'default-theme',
+    'color_theme' => 'gray-theme',
 
     // Meta
     'meta' => [
