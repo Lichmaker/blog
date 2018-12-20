@@ -19,8 +19,8 @@ return [
 
     // Meta
     'meta' => [
-        'keywords' => 'PJ Blog,blog,pigjian,laravel,vuejs',
-        'description' => 'Nothing is impossible in PJ Blog'
+        'keywords' => 'wuguozhang,lichmaker,blog,laravel',
+        'description' => 'No King Rules Forever'
     ],
 
     // Social Share
@@ -39,8 +39,8 @@ return [
 
     // Article Page
     'article' => [
-        'title'       => 'Nothing is impossible.',
-        'description' => 'https://pigjian.com',
+        'title'       => 'No King Rules Forever',
+        'description' => 'http://wuguozhang.com',
         'number'      => 15,
         'sort'        => 'desc',
         'sortColumn'  => 'published_at',
