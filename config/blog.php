@@ -64,7 +64,7 @@ return [
         ],
         'twitter' => [
             'open' => true,
-            'url'  => 'https://twitter.com/pigjian'
+            'url'  => 'https://twitter.com/lichmaker'
         ],
         'weibo' => [
             'open' => true,
