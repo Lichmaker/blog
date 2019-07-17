@@ -15,12 +15,6 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        echo <<<EOF
-<h1>网站迁移，暂时关闭。  --2019-07-16</h1>
-
-EOF;
-        exit;
-
         $articles = Article::checkAuth()
             ->orderBy(config('blog.article.sortColumn'), config('blog.article.sort'))
             ->paginate(config('blog.article.number'));
