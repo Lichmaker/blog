@@ -70,6 +70,3 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'admin']], funct
 // Article
 Route::get('/', 'ArticleController@index');
 Route::get('{slug}', 'ArticleController@show');
-
-// webhooks
-Route::get('hooks/github', 'HooksController@github');
