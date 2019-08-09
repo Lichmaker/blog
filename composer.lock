@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e4d1c8c478004c1fe650ac18a58d9fa",
+    "content-hash": "cfd5eee4f20232942ae171fe8ffa944b",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -1143,6 +1143,104 @@
                 "translate"
             ],
             "time": "2017-07-28T15:36:02+00:00"
+        },
+        {
+            "name": "laravel-shield/github",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-shield/github.git",
+                "reference": "561673d3c9a31e021de2466741c6cfde8fc2e297"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-shield/github/zipball/561673d3c9a31e021de2466741c6cfde8fc2e297",
+                "reference": "561673d3c9a31e021de2466741c6cfde8fc2e297",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "laravel-shield/shield": "^1.0"
+            },
+            "require-dev": {
+                "laravel-shield/testing": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shield\\GitHub\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashley Clarke",
+                    "email": "me@ashleyclarke.me"
+                }
+            ],
+            "description": "A github service for shield",
+            "time": "2017-10-15T14:00:49+00:00"
+        },
+        {
+            "name": "laravel-shield/shield",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-shield/shield.git",
+                "reference": "69e1e94a918f81a953a8831523ccaa664f4e3aa4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-shield/shield/zipball/69e1e94a918f81a953a8831523ccaa664f4e3aa4",
+                "reference": "69e1e94a918f81a953a8831523ccaa664f4e3aa4",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "laravel/framework": "^5.5",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "laravel-shield/testing": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Shield\\Shield\\Providers\\ShieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Shield\\Shield\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashley Clarke",
+                    "email": "me@ashleyclarke.me"
+                }
+            ],
+            "description": "A laravel middleware to shield against unverified webhooks from 3rd party services.",
+            "time": "2017-10-31T20:20:12+00:00"
         },
         {
             "name": "laravel/framework",
