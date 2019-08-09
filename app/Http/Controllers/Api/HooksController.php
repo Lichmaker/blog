@@ -5,6 +5,6 @@ class HooksController extends ApiController
 {
     public function github()
     {
-        var_dump(shell_exec('ls'));
+        var_dump( \Request::json());
     }
 }
