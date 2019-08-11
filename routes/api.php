@@ -93,5 +93,5 @@ Route::group([
     Route::get('tags', 'TagController@getList');
 
     // webhooks
-    Route::post('hooks/github', 'HooksController@github');
+    Route::post('hooks/github', 'HooksController@github')->middleware('shield:github');
 });
