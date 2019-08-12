@@ -9,28 +9,29 @@ class HooksController extends ApiController
     {
         $pullRequestInformation = \Request::json('pull_request');
         if (empty($pullRequestInformation)) {
-            return $this->response->setStatusCode(HttpResponse::HTTP_NO_CONTENT)->json('not found pull request information');
+            return $this->response->setStatusCode(HttpResponse::HTTP_OK)->json('not found pull request information');
         }
 
         if (
             $pullRequestInformation['state'] != 'closed'
             || $pullRequestInformation['merged'] != true
         ) {
-            return $this->response->setStatusCode(HttpResponse::HTTP_NO_CONTENT)->json("it is not a merge action");
+            return $this->response->setStatusCode(HttpResponse::HTTP_OK)->json("it is not a merge action");
         }
 
         if (empty(env('CURRENT_BRANCH'))) {
-            return $this->response->setStatusCode(HttpResponse::HTTP_NO_CONTENT)->json("need to set a current branch.");
+            return $this->response->setStatusCode(HttpResponse::HTTP_OK)->json("need to set a current branch.");
         }
 
         if (
             $pullRequestInformation['base']['ref'] != env('CURRENT_BRANCH')
         ) {
-            return $this->response->setStatusCode(HttpResponse::HTTP_NO_CONTENT)->json("current branch is incorrect");
+            return $this->response->setStatusCode(HttpResponse::HTTP_OK)->json("current branch is incorrect");
         }
 
-        shell_exec('cd '.base_path());
-        $result = shell_exec('git pull');
+        $result = shell_exec('cd '.base_path().' && git pull');
+
+        \Log::info(__METHOD__." : $result");
 
         return $this->response->setStatusCode(HttpResponse::HTTP_OK)->json($result);
     }
