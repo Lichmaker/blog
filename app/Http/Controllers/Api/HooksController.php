@@ -31,7 +31,7 @@ class HooksController extends ApiController
 
         $result = shell_exec('cd '.base_path().' && sudo git pull 2>&1');
         \Log::info(__METHOD__." : $result");
-
+    
         return $this->response->setStatusCode(HttpResponse::HTTP_OK)->json($result);
     }
 }
