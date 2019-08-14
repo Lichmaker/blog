@@ -57,10 +57,26 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">{{ $t('form.datetime') }}</label>
-          <div class="col-sm-10">
+
+          <!-- 这个是日期选择dialog -->
+          <div class="col-sm-2 col-form-label">
+            {{ $t('form.datetime') }}
+          </div>
+          <div class="col-sm-3">
             <date-picker :date="startTime" :option="option"></date-picker>
           </div>
+
+          <!-- 这个是"马上发布"checkbox -->
+          <div class="col-sm-2 col-form-label">
+            {{ $t('form.published_now') }}
+          </div>
+          <div class="togglebutton" style="margin-top: 6px">
+            <label>
+              <input type="checkbox" name="published_now" v-model="article.published_now">
+              <span class="toggle"></span>
+            </label>
+          </div>
+
         </div>
         <div class="form-group row">
           <div class="col-sm-2 col-form-label">
@@ -189,6 +205,7 @@
         this.article.content = this.simplemde.value()
         this.article.category_id = this.selected.id
         this.article.tags = JSON.stringify(tagIDs)
+        // console.log((this.article.published_now))
 
         this.$http[method](url, this.article)
           .then((response) => {

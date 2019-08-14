@@ -70,6 +70,7 @@ export default {
   select_guard_name: '选择应用范围',
   set_permissions: '设置权限',
   save: '保存',
-  submit: '提交'
+  submit: '提交',
+  published_now: '马上发布？',
 
 }

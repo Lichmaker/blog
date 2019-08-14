@@ -44,6 +44,9 @@ class ArticleController extends ApiController
 
         $data['is_draft'] = isset($data['is_draft']);
         $data['is_original'] = isset($data['is_original']);
+        if (isset($data['published_now']) && $data['published_now'] == true) {  // 勾选马上发布，发布时间为系统时间
+            $data['published_at'] = time();
+        }
 
         $article = new Article();
         $article->fill($data);
@@ -81,6 +84,10 @@ class ArticleController extends ApiController
         $data = array_merge($request->all(), [
             'last_user_id' => \Auth::id(),
         ]);
+        if (isset($data['published_now']) && $data['published_now'] == true) {  // 勾选马上发布，发布时间为系统时间
+            $data['published_at'] = time();
+        }
+
         $article = Article::withoutGlobalScope(DraftScope::class)->findOrFail($id);
         $article->update($data);
 
