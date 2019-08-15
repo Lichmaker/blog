@@ -70,7 +70,7 @@ return [
             'open' => true,
             'url'  => 'https://weibo.com/v5zhang/'
         ],
-        'meta' => 'Copyright 2018 by 吴国章. Powered By PJ Blog',
+        'meta' => 'Copyright 2018 by Guozhang Wu. Powered By PJ Blog',
     ],
 
     'license' => '原创文章,转载请保留或注明出处',
