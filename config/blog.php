@@ -19,8 +19,8 @@ return [
 
     // Meta
     'meta' => [
-        'keywords' => 'wuguozhang,lichmaker,blog,laravel',
-        'description' => 'No King Rules Forever'
+        'keywords' => '吴国章,lichmaker,wuguozhang,blog',
+        'description' => '吴国章的个人博客'
     ],
 
     // Social Share
