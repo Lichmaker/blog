@@ -15,10 +15,11 @@
                         </a>
                     </h6>
                     <div class="meta">
-                        <span class="cinema">{{ $article->subtitle }}</span>
+                        {{-- 因为这个副标题，看起来挺尴尬，而且我也不会写，所以都注释了--}}
+{{--                        <span class="cinema">{{ $article->subtitle }}</span>--}}
                     </div>
                     <div class="description">
-                        {{ $article->meta_description }}
+{{--                        {{ $article->meta_description }}--}}
                     </div>
                     <div class="extra">
                         @foreach($article->tags as $tag)
