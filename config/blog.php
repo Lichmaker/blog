@@ -41,9 +41,9 @@ return [
 
     // Article Page
     'article' => [
-        'title'       => 'No King Rules Forever',
-        'subTitle'    => '王权没有永恒',
-        'description' => 'http://wuguozhang.com',
+        'title'       => '网站已改版，欢迎浏览我的最新版博客 www.wuguozhang.com',
+        'subTitle'    => 'Welcome to the latest version of my blog. www.wuguozhang.com',
+        'description' => 'old-blog.wuguozhang.com',
         'number'      => 15,
         'sort'        => 'desc',
         'sortColumn'  => 'published_at',
